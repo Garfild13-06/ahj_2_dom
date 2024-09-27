@@ -1,1 +1,1 @@
-[![Netology AHJ 2 DOM](https://github.com/Garfild13-06/ahj_2_dom/actions/workflows/web.yml/badge.svg)](https://github.com/Garfild13-06/ahj_2_dom/actions/workflows/web.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/d7du7xaiatos15x1?svg=true)](https://ci.appveyor.com/project/Garfild13-06/js-add-unit-testing-matchers)
