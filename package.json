@@ -5,14 +5,27 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server src",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "webpack"
   },
   "author": "coursar",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
     "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "live-server": "^1.2.1"
-  }
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
+    "live-server": "^1.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "repository": "git@github.com:Garfild13-06/ahj_2_dom.git"
 }
