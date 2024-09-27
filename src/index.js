@@ -1,5 +1,5 @@
 import './css/style.css';
-import goblinImg from './goblin.png';
+import goblinImg from './goblin.png'; // Путь к картинке
 // Constants
 const boardSize = 4;
 let currentCell = null;
@@ -28,20 +28,26 @@ function getRandomCell(excludeIndex) {
 function moveCharacter() {
   const cells = document.querySelectorAll('.cell');
 
-  // Remove character from current cell if it exists
+  // Убираем изображение из предыдущей клетки, если оно есть
   if (currentCell !== null) {
     cells[currentCell].innerHTML = '';
   }
 
-  // Get a new random cell index
+  // Получаем новый случайный индекс для клетки
   const newCellIndex = getRandomCell(currentCell);
   currentCell = newCellIndex;
 
-  // Add the character to the new cell
+  // Создаем элемент изображения
   const goblinElement = document.createElement('img');
-  goblinElement.src = goblinImg; // Теперь используем импортированный путь
+  goblinElement.src = goblinImg; // Убедись, что путь правильный
   goblinElement.classList.add('goblin');
-  cells[newCellIndex].appendChild(goblinImg);
+
+  // Добавляем элемент в новую клетку
+  if (cells[newCellIndex]) {
+    cells[newCellIndex].appendChild(goblinElement);
+  } else {
+    console.error('Ошибка: ячейка не найдена.');
+  }
 }
 
 // Initialize the game
